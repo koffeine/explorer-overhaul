@@ -1,13 +1,27 @@
 {
+	"name": "koffeine",
+	"version": "0.0.1",
+	"files": [
+		"src"
+	],
+	"main": "./src/index.js",
 	"type": "module",
+	"activationEvents": [],
+	"contributes": {},
 	"scripts": {
-		"test": "eslint && tsc"
+		"test": "eslint && tsc",
+		"build": "vsce package --allow-missing-repository --skip-license"
 	},
 	"devDependencies": {
 		"@koffeine/eslint-config": "^48.7.0",
+		"@types/vscode": "^1.116.0",
+		"@vscode/vsce": "^3.9.1",
 		"eslint": "^10.2.1",
 		"globals": "^17.5.0",
 		"typescript": "^6.0.3"
+	},
+	"engines": {
+		"vscode": "^1.116.0"
 	},
 	"devEngines": {
 		"runtime": {
