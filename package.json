@@ -1,11 +1,15 @@
 {
 	"name": "explorer-overhaul",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"files": [
-		"src"
+		"src",
+		"icon.png"
 	],
 	"main": "./src/index.js",
 	"type": "module",
+	"icon": "./icon.png",
+	"displayName": "Explorer Overhaul",
+	"publisher": "koffeine",
 	"activationEvents": [],
 	"contributes": {
 		"commands": [
