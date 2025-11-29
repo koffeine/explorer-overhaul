@@ -1,5 +1,5 @@
 {
-	"name": "koffeine",
+	"name": "explorer-overhaul",
 	"version": "0.0.1",
 	"files": [
 		"src"
@@ -9,13 +9,50 @@
 	"activationEvents": [
 	],
 	"contributes": {
+		"commands": [
+			{
+				"command": "explorer-overhaul.replaceInFolderWithWorkbenchStateFolder",
+				"title": "Replace in Folder..."
+			},
+			{
+				"command": "explorer-overhaul.replaceInFolderWithWorkbenchStateWorkspace",
+				"title": "Replace in Folder..."
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"when": "false",
+					"command": "explorer-overhaul.replaceInFolderWithWorkbenchStateFolder"
+				},
+				{
+					"when": "false",
+					"command": "explorer-overhaul.replaceInFolderWithWorkbenchStateWorkspace"
+				}
+			],
+			"explorer/context": [
+				{
+					"when": "explorerResourceIsFolder && workbenchState === 'folder'",
+					"group": "4_search@20",
+					"command": "explorer-overhaul.replaceInFolderWithWorkbenchStateFolder"
+				},
+				{
+					"when": "explorerResourceIsFolder && workbenchState === 'workspace'",
+					"group": "4_search@20",
+					"command": "explorer-overhaul.replaceInFolderWithWorkbenchStateWorkspace"
+				}
+			]
+		}
 	},
 	"scripts": {
+		"postinstall": "cp node_modules/@types/node/string_decoder.d.ts node_modules/string_decoder/lib",
 		"test": "eslint && tsc -p jsconfig.json",
 		"build": "vsce package --allow-missing-repository --skip-license"
 	},
 	"devDependencies": {
 		"@koffeine/eslint-config": "^47",
+		"@types/node": "^24",
+		"@types/punycode": "^2",
 		"@types/vscode": "^1.106.1",
 		"@vscode/vsce": "^3",
 		"eslint": "^9",
