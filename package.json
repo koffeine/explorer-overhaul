@@ -60,7 +60,7 @@
 		"@types/vscode": "^1.106.1",
 		"@vscode/vsce": "^3",
 		"eslint": "^9",
-		"globals": "^16",
+		"globals": "^17",
 		"typescript": "^5"
 	},
 	"engines": {
