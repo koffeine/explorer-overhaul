@@ -53,12 +53,12 @@
 		"build": "vsce package --allow-missing-repository --skip-license"
 	},
 	"devDependencies": {
-		"@koffeine/eslint-config": "^47.7.0",
-		"@types/node": "^24.10.11",
+		"@koffeine/eslint-config": "^48.1.0",
+		"@types/node": "^24.10.13",
 		"@types/punycode": "^2.1.4",
 		"@types/vscode": "^1.109.0",
 		"@vscode/vsce": "^3.7.1",
-		"eslint": "^9.39.2",
+		"eslint": "^10.0.1",
 		"globals": "^17.3.0",
 		"typescript": "^5.9.3"
 	},
